@@ -44,7 +44,9 @@ font_main = font.Font(None, 36)
 background = image.load("images/bg.jpg")
 background = transform.scale(background,(WIDTH,HEIGHT))
 # --- ЗВУКИ ---
-
+mixer.music.load("music/bg.ogg")
+mixer.music.set_volume(0.05) 
+mixer.music.play(-1)
 # --- ГРА ---
 game_over = False
 winner = None
