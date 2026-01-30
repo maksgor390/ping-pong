@@ -47,6 +47,8 @@ background = transform.scale(background,(WIDTH,HEIGHT))
 mixer.music.load("music/bg.ogg")
 mixer.music.set_volume(0.05) 
 mixer.music.play(-1)
+
+hit = mixer.Sound("music/hit.wav")
 # --- ГРА ---
 game_over = False
 winner = None
@@ -103,7 +105,7 @@ while True:
                 # звук відбиття м'ячика від стін
                 pass
             if game_state['sound_event'] == 'platform_hit':
-                # звук відбиття м'ячика від платформи
+                hit.play()
                 pass
 
     else:
