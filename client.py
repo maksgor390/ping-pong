@@ -76,6 +76,8 @@ while True:
                 win.play()
                 you_winner = True
             else:
+                folse = mixer.Sound("music/lose.wav")
+                folse.play()
                 you_winner = False
 
         if you_winner:
