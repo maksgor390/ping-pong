@@ -72,6 +72,8 @@ while True:
 
         if you_winner is None:  # Встановлюємо тільки один раз
             if game_state["winner"] == my_id:
+                win = mixer.Sound("music/win.wav")
+                win.play()
                 you_winner = True
             else:
                 you_winner = False
